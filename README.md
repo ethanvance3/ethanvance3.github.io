@@ -8,7 +8,11 @@ Hướng dẫn phân loại và đối chiếu xấp vé số **XSMN T6** nhiề
 
 Bà con có thói quen mua nhiều tờ vé số cùng một lúc vào ngày thứ Sáu để ủng hộ người bán vé dạo? Làm thế nào để đối chiếu một xấp vé số của nhiều đài khác nhau mà không bị rối mắt và nhầm lẫn? Cách đơn giản là bà con hãy phân loại vé theo tỉnh, xếp gọn gàng rồi truy cập trang mạng Xổ số Thiên Phú để so khớp từng tờ một cách khoa học.
 
-Ngày thứ Sáu ở miền Nam có ba tỉnh cùng tiến hành quay số mở thưởng hằng tuần. Đó là các đài Vĩnh Long, Bình Dương và Trà Vinh. Trước khi bắt đầu tra cứu kết quả [XSMN T6](https://xosothienphu.vn/xsmn-thu-6.html), bà con hãy dành ra một phút để phân loại xấp vé số trên tay mình. Hãy gom các tờ vé của cùng một tỉnh lại với nhau.
+![cach-doi-chieu-nhieu-ve-so-xsmn-t6-trong-mot-lan-kiem-tra-1.jpg](https://sf-static.upanhlaylink.com/img/image_20260727c41000a507772538d83a6aca6d181c8b.jpg)
+
+*Nguồn: Ảnh do vesophattai.vn cung cấp*
+
+Ngày thứ Sáu ở miền Nam có ba tỉnh cùng tiến hành quay số mở thưởng hằng tuần. Đó là các đài Vĩnh Long, Bình Dương và Trà Vinh. Trước khi bắt đầu tra cứu kết quả [**XSMN T6**](https://xosothienphu.vn/xsmn-thu-6.html), bà con hãy dành ra một phút để phân loại xấp vé số trên tay mình. Hãy gom các tờ vé của cùng một tỉnh lại với nhau.
 
 Bà con hãy nhìn vào phần chữ in to rõ ở góc trên cùng để biết tên tỉnh. Đừng để các tờ vé của các tỉnh khác nhau nằm xen kẽ hằng ngày. Việc phân nhóm này giúp bà con khi dò số **XSMN T6** chỉ cần tập trung nhìn vào đúng một cột kết quả của tỉnh đó trên màn hình điện thoại di động. Bà con sẽ không bị mất công liếc mắt qua lại giữa các cột đài khác nhau, giúp giảm thiểu tối đa tình trạng nhìn lộn số.
 
@@ -43,6 +47,10 @@ Hãy dùng một cây thước kẻ nhỏ hoặc một mảnh giấy để che b
 ---
 
 ## 5. Tra cứu bảng kết quả đa đài thông thoáng tại Xổ số Thiên Phú
+
+![cach-doi-chieu-nhieu-ve-so-xsmn-t6-trong-mot-lan-kiem-tra-2.jpg](https://sf-static.upanhlaylink.com/img/image_20260727ff21a87782647f159c046165bc3d71af.jpg)
+
+*Nguồn: Ảnh do Xổ Số Thiên Phú cung cấp*
 
 Trang mạng Xổ số Thiên Phú là địa chỉ tuyệt vời giúp bà con đối chiếu nhiều vé số cùng lúc vào chiều thứ Sáu hằng tuần. Chúng tôi thiết kế bảng số **XSMN T6** đa đài với các cột đứng thẳng hàng, rõ chữ và không bị xô lệch khi bà con lướt màn hình điện thoại di động.
 

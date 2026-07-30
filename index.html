@@ -32,7 +32,7 @@
             display: block;
         }
 
-        /* --- CONTAINER (Chiều rộng chuẩn cho giao diện đọc blog) --- */
+        /* --- CONTAINER --- */
         .container {
             max-width: 860px;
             margin: 0 auto;
@@ -46,6 +46,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            margin-bottom: 25px;
         }
         .header-wrap {
             display: flex;
@@ -68,26 +69,12 @@
             color: #2c3e50;
             font-weight: 600;
             font-size: 14px;
-            padding: 6px 10px;
+            padding: 6px 12px;
             border-radius: 4px;
         }
         .nav-menu a:hover, .nav-menu a.active {
             background-color: #f8f9fa;
             color: #c0392b;
-        }
-
-        /* --- BREADCRUMB --- */
-        .breadcrumb {
-            padding: 15px 0 10px 0;
-            font-size: 13px;
-            color: #666666;
-        }
-        .breadcrumb a {
-            color: #555555;
-        }
-        .breadcrumb span {
-            margin: 0 5px;
-            color: #999;
         }
 
         /* --- MAIN CONTENT --- */
@@ -242,9 +229,6 @@
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
             .related-grid {
                 grid-template-columns: 1fr;
             }
@@ -265,26 +249,15 @@
             <div class="logo">Blog Xổ Số</div>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">XSMB</a></li>
-                    <li><a href="#" class="active">XSMT</a></li>
-                    <li><a href="#">XSMN</a></li>
-                    <li><a href="#">Sổ Mơ</a></li>
-                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Blog</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- BREADCRUMB -->
+    <!-- MAIN CONTENT AREA -->
     <div class="container">
-        <div class="breadcrumb">
-            <a href="#">Trang chủ</a> <span>&gt;</span> 
-            <a href="#">Xổ số miền Trung</a> <span>&gt;</span> 
-            <b>Hướng dẫn tra cứu</b>
-        </div>
-
-        <!-- MAIN CONTENT AREA -->
         <main class="content-area">
             <article>
 
@@ -418,21 +391,21 @@
                 <div class="related-grid">
                     <!-- Post 1 -->
                     <a href="#" class="related-card">
-                        <img src="" alt="Bài viết 1">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_2026073077851522f4f12a79a8f99e451ab5fc96.jpg" alt="Bài viết 1">
                         <div class="related-card-body">
                             <div class="related-card-title">Kết quả xổ số miền Trung thứ 3: Xem đài Quảng Nam, Đắk Lắk</div>
                         </div>
                     </a>
                     <!-- Post 2 -->
                     <a href="#" class="related-card">
-                        <img src="" alt="Bài viết 2">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_202607307ed54285a0dec64badf041fa276efd8c.jpg" alt="Bài viết 2">
                         <div class="related-card-body">
                             <div class="related-card-title">Hướng dẫn đổi số trúng thưởng an toàn, nhanh chóng tại nhà</div>
                         </div>
                     </a>
                     <!-- Post 3 -->
                     <a href="#" class="related-card">
-                        <img src="" alt="Bài viết 3">
+                        <img src="https://sf-static.upanhlaylink.com/img/image_2026073077851522f4f12a79a8f99e451ab5fc96.jpg" alt="Bài viết 3">
                         <div class="related-card-body">
                             <div class="related-card-title">Lịch quay thưởng XSMT chi tiết các ngày trong tuần mới nhất</div>
                         </div>

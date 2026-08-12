@@ -60,4 +60,9 @@ Cỡ chữ to rõ ràng, màu sắc hài hòa giúp mắt bà con không bị nh
 
 *Xem thêm: [https://www.geeksforgeeks.org/profile/ethanvance](https://www.geeksforgeeks.org/profile/ethanvance)*
 
-`#xsmnthu6` `#xosothienphu` `#doveso` `#ketquaxoso` `#dovesonhieutay`
+---
+
+# Danh Sách Bài Viết Hướng Dẫn Xổ Số
+
+* [XS Phú Yên: Xem Kết Quả Mới Nhất Chuẩn Xác Nhanh Chóng](https://github.com/ethanvance3/home/blob/main/xs-phu-yen-xem-ket-qua-moi-nhat-chuan-xac-nhanh-chong.md)
+

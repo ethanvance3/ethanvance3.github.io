@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+
+  <!-- Trang chủ -->
+  <url>
+    <loc>https://ethanvance3.github.io/home/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Bài 1 -->
+  <url>
+    <lochttps://ethanvance3.github.io/home/xs-hom-nay-cac-buoc-kiem-tra-ve-so-mien-nam-chuan-xac.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Bài 2 -->
+  <url>
+    <loc>https://ethanvance3.github.io/home/power-6-55-dieu-nen-xac-nhan-truoc-khi-tin-ket-qua-truyen-mieng.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Bài 3 -->
+  <url>
+    <loc>https://ethanvance3.github.io/home/ket-qua-xo-so-binh-phuoc-hom-nay-tra-cuu-xsbp-sieu-toc.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>

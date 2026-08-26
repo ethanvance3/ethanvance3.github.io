@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xổ số kiến thiết Long An: Dò kết quả XSLA liên tục hôm nay - Blog Ethan Vance</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-hover: #b71c1c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #222222;
+            --text-muted: #666666;
+            --border-color: #eee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-bar {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .brand-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Header Banner (Trỏ link về trang chủ GitHub Pages & Max-width 1600px) */
+        .header-banner-link {
+            display: block;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+
+        .header-banner-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container Main Body */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        .post-container {
+            background: var(--card-bg);
+            padding: 24px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 20px;
+        }
+
+        /* Post Meta Bar (Tác giả, Ngày đăng, Lượt xem) */
+        .post-meta-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 10px 0 18px 0;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .meta-item svg {
+            width: 15px;
+            height: 15px;
+            fill: #888;
+        }
+
+        /* Block Navigation (Next / Prev) */
+        .post-navigation {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .nav-box {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: background 0.2s ease;
+        }
+
+        .nav-box:hover {
+            background: #f0f0f0;
+        }
+
+        .nav-box.prev {
+            text-align: left;
+        }
+
+        .nav-box.next {
+            text-align: right;
+        }
+
+        .nav-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .nav-post-title {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            font-weight: 600;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer & Social Links Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 24px 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #2a2a2a;
+            color: #cccccc;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .copyright-text {
+            color: #888888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 12px;
+                margin: 15px auto;
+            }
+            .post-container {
+                padding: 18px 16px;
+            }
+            .post-navigation {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .nav-box.next {
+                text-align: left;
+            }
+            .post-meta-bar {
+                gap: 10px;
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header Navigation (Link trỏ về ethanvance3.github.io) -->
+    <div class="sticky-nav">
+        <div class="nav-bar">
+            <a href="https://ethanvance3.github.io/" class="brand-link">
+                <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                <span>Blog Ethan Vance</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header Banner (Bọc trong thẻ <a> trỏ về trang chủ https://ethanvance3.github.io/) -->
+    <a href="https://ethanvance3.github.io/" class="header-banner-link" title="Trang chủ Blog Ethan Vance">
+        <img src="https://sf-static.upanhlaylink.com/img/image_20260826db445dc03c6c0a4103105321658f365a.jpg" alt="Header Banner Long An">
+    </a>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <main class="post-container">
+            <article style="font-family: inherit; color: #333333; line-height: 1.6; max-width: 100%; margin: 0 auto;">
+
+                <!-- Title H1 -->
+                <h1 style="color: #c0392b; font-size: 22px; font-weight: bold; margin-bottom: 8px;">
+                    Xổ số kiến thiết Long An: Dò kết quả XSLA liên tục hôm nay
+                </h1>
+
+                <!-- Post Meta (Tác giả - Ngày đăng - Lượt xem) -->
+                <div class="post-meta-bar">
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Tác giả: <strong>Ethan Vance</strong></span>
+                    </div>
+                    <span>•</span>
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                        <span>Ngày đăng: <strong>26/08/2026</strong></span>
+                    </div>
+                    <span>•</span>
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        <span>Lượt xem: <strong>2,845</strong></span>
+                    </div>
+                </div>
+
+                <!-- Sapo -->
+                <div style="background-color: #f8f9fa; border-left: 4px solid #c0392b; padding: 12px 15px; font-size: 15px; font-weight: 500; color: #444444; margin-bottom: 20px; border-radius: 0 4px 4px 0;">
+                    Cập nhật xổ số kiến thiết Long An trực tiếp siêu tốc, tra cứu kết quả XSLA nhanh chóng, xem lịch quay Thứ Bảy, cơ cấu giải thưởng và địa chỉ công ty XSKT.
+                </div>
+
+                <!-- Intro -->
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Chào mừng bà con đã đến với không gian chia sẻ thông tin về <a href="https://xosothienphu.vn/xsla-xo-so-long-an-sxla.html" target="_blank" rel="noopener" title="xổ số kiến thiết Long An" style="color: #c0392b; font-weight: bold; text-decoration: underline;">xổ số kiến thiết Long An</a> truyền thống, một loại hình giải trí lành mạnh và đầy ý nghĩa tại Việt Nam.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Xổ số Long An từ lâu đã trở thành một phần không thể thiếu trong đời sống tinh thần của bà con khu vực miền Nam vào mỗi dịp cuối tuần. Với khẩu hiệu <strong>Xổ số kiến thiết - Ích nước lợi nhà</strong>, mỗi tờ vé số mà bà con cầm trên tay không chỉ mang lại cơ hội nhận giải thưởng giá trị mà còn góp phần xây dựng các công trình công cộng, y tế và giáo dục tại địa phương. Trong thời đại công nghệ số phát triển như hiện nay, việc theo dõi và tra cứu thông tin đã trở nên đơn giản hơn bao giờ hết nhờ vào các ứng dụng trực tuyến hiện đại. Bài viết này sẽ hướng dẫn bà con cách cập nhật thông tin một cách hiệu quả và đầy đủ nhất.
+                </p>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 19px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    KHUNG GIỜ QUAY THƯỞNG VÀ LỊCH MỞ THƯỞNG XỔ SỐ LONG AN
+                </h2>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Thời gian diễn ra buổi quay số trực tiếp
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Xổ số Long An thuộc hệ thống xổ số miền Nam (XSMN), do đó khung giờ mở thưởng được quy định rất chặt chẽ để bà con tiện theo dõi. Buổi quay số trực tiếp sẽ diễn ra trong khoảng thời gian từ 16h10 đến 16h35.
+                </p>
+
+                <!-- Blockquote -->
+                <blockquote style="background-color: #f0f7ff; border-left: 4px solid #2980b9; margin: 20px 0; padding: 12px 18px; font-style: italic; color: #2c3e50;">
+                    "Khung giờ quay thưởng trực tiếp Xổ số Long An diễn ra cố định từ 16h10 đến 16h35 vào chiều Thứ Bảy hàng tuần."
+                </blockquote>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Đây là thời khắc mà rất nhiều bà con mong chờ để đối soát những con số trên tờ vé mình đang sở hữu. Việc nắm rõ khung giờ này giúp bà con chủ động sắp xếp thời gian, bật điện thoại hoặc máy tính để đón xem kết quả một cách kịp thời.
+                </p>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Lịch mở thưởng chi tiết của các đài miền Nam trong tuần
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Để bà con không bị nhầm lẫn giữa các ngày trong tuần khi đối chiếu cùng <a href="https://xosothienphu.vn/xsmn-thu-7.html" target="_blank" rel="noopener" title="xổ số miền Nam thứ bảy" style="color: #2980b9; text-decoration: none; font-weight: bold;">xổ số miền Nam thứ bảy</a>, chúng tôi xin liệt kê lịch mở thưởng cụ thể của đài Long An cùng các đài lân cận trong khu vực miền Nam như sau:
+                </p>
+
+                <!-- List -->
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>1. Thứ Hai:</strong> Đài Thành phố Hồ Chí Minh, Đồng Tháp và Cà Mau.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>2. Thứ Ba:</strong> Đài Bến Tre, Vũng Tàu và Bạc Liêu.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>3. Thứ Tư:</strong> Đài Đồng Nai, Cần Thơ và Sóc Trăng.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>4. Thứ Năm:</strong> Đài Tây Ninh, An Giang và Bình Thuận.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>5. Thứ Sáu:</strong> Đài Vĩnh Long, Bình Dương và Trà Vinh.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>6. Thứ Bảy:</strong> Đài Thành phố Hồ Chí Minh, Long An, Hậu Giang và Bình Phước.</p>
+                <p style="margin-bottom: 15px; text-align: justify;"><strong>7. Chủ Nhật:</strong> Đài Tiền Giang, Kiên Giang và Đà Lạt.</p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Như vậy, cứ vào mỗi chiều Thứ Bảy hàng tuần, bà con hãy nhớ lịch hẹn với đài Long An để không bỏ lỡ những thông tin mới nhất.
+                </p>
+
+                <!-- Image 1 -->
+                <figure style="margin: 20px 0; text-align: center;">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_2026082658041718d94207599759f9f8ef49c03b.jpg" alt="Tra cứu xổ số kiến thiết Long An mượt mà trên di động" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                    <figcaption style="font-size: 13.5px; color: #666666; font-style: italic; margin-top: 8px;">Nguồn: Ảnh từ vesophattai.vn</figcaption>
+                </figure>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 19px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    TRẢI NGHIỆM DÒ SỐ HIỆN ĐẠI TRÊN CÁC NỀN TẢNG SỐ
+                </h2>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Thao tác chạm lướt thông minh và giao diện tối giản
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Hiện nay, việc dò số không còn bó buộc vào việc đứng trước tivi hay chờ đợi tờ vé dò truyền thống. Bà con có thể dễ dàng sử dụng điện thoại thông minh để cập nhật kết quả.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Các trang web hiện đại được thiết kế với giao diện tối giản, tập trung vào trải nghiệm người dùng. Với màu sắc hài hòa, phông chữ rõ ràng, bà con sẽ không cảm thấy mỏi mắt ngay cả khi nhìn vào màn hình trong thời gian dài. Mọi thao tác từ việc chọn ngày, chọn đài đến việc xem lại lịch sử kết quả nhiều kỳ đều được tối ưu hóa chỉ với vài cái chạm nhẹ trên màn hình cảm ứng. Tốc độ tải trang mượt mà giúp dữ liệu hiển thị ngay lập tức, đảm bảo bà con luôn có thông tin nhanh nhất.
+                </p>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Cập nhật theo thời gian trực tiếp từ trường quay
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Điểm đặc biệt của việc tra cứu trực tuyến <strong>xổ số kiến thiết Long An</strong> là tính liên tục. Khi buổi quay số đang diễn ra tại trường quay, các con số sẽ lần lượt được hiển thị trên trang web.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Bà con có thể cập nhật nhanh chóng, chuẩn xác và tiện lợi tại trang web Xổ số Thiên Phú. Hệ thống sẽ tự động hiển thị từng giải thưởng từ giải tám cho đến giải đặc biệt, giúp bà con cảm nhận được không khí hồi hộp như đang có mặt trực tiếp tại buổi quay số. Bên cạnh đó, tính năng lưu trữ lịch sử kết quả nhiều kỳ cũng giúp bà con dễ dàng xem lại các thông tin của những tuần trước đó nếu chẳng may bỏ lỡ.
+                </p>
+
+                <hr style="border: 0; height: 1px; background-color: #d1d8e0; margin: 25px 0;">
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 19px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    CƠ CẤU GIẢI THƯỞNG CHI TIẾT CỦA XỔ SỐ MIỀN NAM
+                </h2>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Danh sách các hạng giải thưởng cho vé mệnh giá mười nghìn đồng
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Khi tham gia mua vé số đài Long An, bà con cần nắm rõ cơ cấu giải thưởng để biết chính xác giá trị mình có thể nhận được. Với mỗi tờ vé mệnh giá 10.000 VNĐ, hệ thống giải thưởng bao gồm 18 lần quay số với 11 hạng giải khác nhau khi đối chiếu <strong>xổ số kiến thiết Long An</strong>:
+                </p>
+
+                <!-- Cơ cấu giải -->
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>1. 01 Giải Đặc biệt:</strong> Trị giá 2.000.000.000 VNĐ cho mỗi vé.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>2. 10 Giải Nhất:</strong> Mỗi giải trị giá 30.000.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>3. 10 Giải Nhì:</strong> Mỗi giải trị giá 15.000.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>4. 20 Giải Ba:</strong> Mỗi giải trị giá 10.000.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>5. 70 Giải Tư:</strong> Mỗi giải trị giá 3.000.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>6. 100 Giải Năm:</strong> Mỗi giải trị giá 1.000.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>7. 300 Giải Sáu:</strong> Mỗi giải trị giá 400.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>8. 1.000 Giải Bảy:</strong> Mỗi giải trị giá 200.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>9. 10.000 Giải Tám:</strong> Mỗi giải trị giá 100.000 VNĐ.</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>10. 09 Giải Phụ Đặc biệt:</strong> Mỗi giải trị giá 50.000.000 VNĐ dành cho những vé chỉ sai một chữ số ở hàng trăm ngàn so với giải Đặc biệt.</p>
+                <p style="margin-bottom: 15px; text-align: justify;"><strong>11. 45 Giải Khuyến khích:</strong> Mỗi giải trị giá 6.000.000 VNĐ dành cho những vé trúng chữ số hàng trăm ngàn và chỉ sai một chữ số ở bất kỳ hàng nào còn lại so với giải Đặc biệt.</p>
+
+                <!-- Image 2 -->
+                <figure style="margin: 20px 0; text-align: center;">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_20260826ab73bc3a566ccb8886e09518ceb692dd.jpg" alt="Dò kết quả xổ số kiến thiết Long An chuẩn xác tại Xổ Số Thiên Phú" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                    <figcaption style="font-size: 13.5px; color: #666666; font-style: italic; margin-top: 8px;">Nguồn: Ảnh do Xổ Số Thiên Phú cung cấp</figcaption>
+                </figure>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 19px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    THÔNG TIN LIÊN HỆ CÔNG TY XỔ SỐ KIẾN THIẾT LONG AN
+                </h2>
+
+                <!-- Heading 3 -->
+                <h3 style="color: #2980b9; font-size: 16px; font-weight: bold; margin-top: 18px; margin-bottom: 10px;">
+                    Địa chỉ trụ sở chính thức
+                </h3>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Trong trường hợp bà con may mắn trúng thưởng hoặc cần liên hệ để tìm hiểu thêm các thông tin về quy định lĩnh thưởng khi tra cứu vé <strong>xổ số kiến thiết Long An</strong>, bà con có thể tới trực tiếp trụ sở công ty.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Theo dữ liệu chuẩn, địa chỉ trụ sở chính thức được đặt tại:
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    <strong>Công ty Xổ số kiến thiết Long An:</strong> Số 120, Tuyến tránh Quốc lộ 1, phường Long An, tỉnh Tây Ninh.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Bà con lưu ý mang theo tờ vé số còn nguyên vẹn, không rách nát, không tẩy xóa và các giấy tờ tùy thân cần thiết để thực hiện thủ tục nhận thưởng theo đúng quy định của pháp luật. Việc nắm rõ địa chỉ và thông tin liên hệ giúp bà con yên tâm hơn khi tham gia mua vé số kiến thiết.
+                </p>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 19px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    GIÁ TRỊ XÃ HỘI CỦA VIỆC THAM GIA XỔ SỐ KIẾN THIẾT
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Hoạt động kinh doanh xổ số không chỉ đơn thuần là một trò chơi có thưởng mà còn mang đậm tính nhân văn. Mỗi tờ vé số bà con mua đóng góp một phần kinh phí vào ngân sách nhà nước để triển khai các chương trình an sinh xã hội.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Đó có thể là những ngôi trường mới cho các em nhỏ, những bệnh viện hiện đại phục vụ nhân dân hay những cây cầu giúp giao thông nông thôn trở nên thuận tiện hơn. Vì vậy, khi tham gia, bà con hãy luôn giữ tâm lý thoải mái và xem đây là một cách ủng hộ cho sự phát triển của quê hương. Hãy là một người chơi thông thái, biết điểm dừng và luôn tuân thủ các quy định về xổ số truyền thống hợp pháp.
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Đừng quên truy cập thường xuyên vào Xổ số Thiên Phú để không bỏ lỡ các buổi quay thưởng trực tiếp diễn ra từ 16h10 đến 16h35 mỗi ngày. Chúng tôi luôn nỗ lực mang đến cho bà con những trải nghiệm số tốt nhất, giúp việc tra cứu thông tin trở nên nhẹ nhàng và thú vị hơn bao giờ hết. Chúc bà con có những giây phút thư giãn và tìm thấy niềm vui cùng xổ số kiến thiết Long An.
+                </p>
+
+                <!-- Block Xem thêm -->
+                <div style="background-color: #ebf5fb; border: 1px dashed #2980b9; padding: 12px 15px; border-radius: 6px; margin: 25px 0;">
+                    <span style="font-weight: bold; color: #c0392b; text-transform: uppercase; font-size: 13px;">Xem thêm:</span> 
+                    <a href="https://ethanvance.framer.website/" target="_blank" rel="noopener" style="color: #2980b9; font-weight: bold; text-decoration: none; margin-left: 5px;">https://ethanvance.framer.website/</a>
+                </div>
+
+            </article>
+        </main>
+
+        <!-- Navigation Next / Prev -->
+        <nav class="post-navigation">
+            <a href="https://ethanvance3.github.io/ket-qua-xo-so-binh-phuoc-hom-nay-tra-cuu-xsbp-sieu-toc.html" class="nav-box prev">
+                <span class="nav-label">← Bài trước đó</span>
+                <span class="nav-post-title">Kết quả xổ số Bình Phước hôm nay: Tra cứu XSBP siêu tốc</span>
+            </a>
+            <a href="https://ethanvance3.github.io/power-6-55-dieu-nen-xac-nhan-truoc-khi-tin-ket-qua-truyen-mieng.html" class="nav-box next">
+                <span class="nav-label">Bài tiếp theo →</span>
+                <span class="nav-post-title">Power 6 55: Điều nên xác nhận trước khi tin kết quả truyền miệng</span>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Footer cố định Social Networks (Đã xóa GitHub) -->
+    <footer>
+        <div class="footer-socials">
+            <!-- X (Twitter) -->
+            <a href="https://x.com/ethanvance17" target="_blank" rel="noopener" class="social-link" title="X (Twitter)">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="https://www.pinterest.com/ethanvance2" target="_blank" rel="noopener" class="social-link" title="Pinterest">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+            </a>
+            <!-- Youtube -->
+            <a href="https://www.youtube.com/@xosothienphu" target="_blank" rel="noopener" class="social-link" title="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- Mastodon -->
+            <a href="https://mastodon.social/@ethanvance" target="_blank" rel="noopener" class="social-link" title="Mastodon">
+                <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.3-5.004C15.334.028 12 .008 12 .008s-3.334.02-5.968.301C3.352.703 1.085 2.735.734 5.313c-.417 3.085-.453 6.643-.075 9.778.261 2.164 1.34 4.246 3.49 5.093 2.17.854 4.634.985 6.942.827 2.164-.148 4.195-.733 6.014-1.848-.124-.555-.262-1.116-.41-1.67-.09-.347-.406-.59-.762-.572-1.442.072-2.884.095-4.327.027-1.46-.07-2.923-.284-4.32-.733-.314-.1-.497-.432-.423-.755.074-.323.385-.536.708-.475 2.656.495 5.38.583 8.067.243 1.983-.25 3.916-.893 5.688-1.876 1.066-1.554 1.31-3.488 1.4-5.323.14-2.83.053-5.672-.257-8.498zM17.65 13.9h-2.51v-5.27c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v2.86H9.68v-2.86c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v5.27H4.35V8.53c0-1.12.3-2.01.9-2.67.6-.66 1.4-1 2.4-1 1.16 0 2.03.44 2.61 1.32.58-.88 1.45-1.32 2.61-1.32 1 0 1.8.34 2.4 1 .6.66.9 1.55.9 2.67V13.9z"/></svg>
+            </a>
+            <!-- Vimeo -->
+            <a href="https://vimeo.com/ethanvance" target="_blank" rel="noopener" class="social-link" title="Vimeo">
+                <svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L4.85 9.873C4.24 7.632 3.518 6.512 2.684 6.512c-.179 0-.803.376-1.87 1.129L0 6.604c1.176-1.033 2.333-2.071 3.47-3.11 1.564-1.353 2.73-2.07 3.501-2.148 1.826-.179 2.957 1.07 3.393 3.746.471 2.879.802 4.654.992 5.326.643 2.977 1.353 4.467 2.13 4.467.608 0 1.518-.962 2.73-2.887 1.212-1.926 1.854-3.39 1.928-4.39.144-1.638-.46-2.458-1.815-2.458-.643 0-1.302.147-1.979.442 1.321-4.312 3.84-6.381 7.558-6.208 2.747.126 4.07 1.802 3.969 5.03z"/></svg>
+            </a>
+            <!-- Framer (Website) -->
+            <a href="https://ethanvance.framer.website/" target="_blank" rel="noopener" class="social-link" title="Framer Portfolio">
+                <svg viewBox="0 0 24 24"><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+            </a>
+        </div>
+        <div class="copyright-text">
+            © xosothienphu.vn - Blog Ethan Vance
+        </div>
+    </footer>
+
+</body>
+</html>

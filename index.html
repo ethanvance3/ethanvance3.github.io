@@ -142,7 +142,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-color);
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -157,12 +157,18 @@
             border-radius: 2px;
         }
 
+        .blog-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
         .featured-card {
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            margin-bottom: 30px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -171,34 +177,15 @@
             box-shadow: 0 6px 16px rgba(0,0,0,0.08);
         }
 
-        .featured-thumb {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
         .featured-content {
             padding: 20px;
         }
 
-        .featured-tag {
-            display: inline-block;
-            background-color: #ffebee;
-            color: var(--primary-color);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
         .featured-title {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 700;
             line-height: 1.4;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .featured-title a {
@@ -214,7 +201,7 @@
         .featured-desc {
             font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
@@ -227,7 +214,7 @@
             gap: 6px;
             color: var(--primary-color);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-decoration: none;
         }
 
@@ -292,9 +279,6 @@
             .profile-card {
                 padding: 24px 16px;
             }
-            .featured-thumb {
-                height: 180px;
-            }
             .featured-content {
                 padding: 16px;
             }
@@ -335,23 +319,52 @@
         <!-- Feature Blog Section -->
         <div class="section-title">Bài viết nổi bật</div>
 
-        <article class="featured-card">
-            <a href="post-detail.html">
-                <img src="https://sf-static.upanhlaylink.com/img/image_2026082658041718d94207599759f9f8ef49c03b.jpg" alt="Xổ số kiến thiết Long An" class="featured-thumb">
-            </a>
-            <div class="featured-content">
-                <span class="featured-tag">Xổ Số Miền Nam</span>
-                <h2 class="featured-title">
-                    <a href="post-detail.html">Xổ số kiến thiết Long An: Dò kết quả XSLA liên tục hôm nay</a>
-                </h2>
-                <p class="featured-desc">
-                    Cập nhật xổ số kiến thiết Long An trực tiếp siêu tốc, tra cứu kết quả XSLA nhanh chóng, xem lịch quay Thứ Bảy, cơ cấu giải thưởng và địa chỉ công ty XSKT.
-                </p>
-                <a href="post-detail.html" class="read-more-btn">
-                    Đọc tiếp bài viết <span>→</span>
-                </a>
-            </div>
-        </article>
+        <div class="blog-list">
+            <!-- Bài 1: Bình Phước -->
+            <article class="featured-card">
+                <div class="featured-content">
+                    <h2 class="featured-title">
+                        <a href="https://ethanvance3.github.io/ket-qua-xo-so-binh-phuoc-hom-nay-tra-cuu-xsbp-sieu-toc.html">Kết quả xổ số Bình Phước hôm nay: Tra cứu XSBP siêu tốc</a>
+                    </h2>
+                    <p class="featured-desc">
+                        Tra cứu kết quả xổ số kiến thiết Bình Phước trực tiếp nhanh chóng, chính xác. Xem thông tin lịch mở thưởng và cơ cấu giải thưởng XSBP mới nhất.
+                    </p>
+                    <a href="https://ethanvance3.github.io/ket-qua-xo-so-binh-phuoc-hom-nay-tra-cuu-xsbp-sieu-toc.html" class="read-more-btn">
+                        Đọc tiếp bài viết <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Bài 2: Long An -->
+            <article class="featured-card">
+                <div class="featured-content">
+                    <h2 class="featured-title">
+                        <a href="https://ethanvance3.github.io/xo-so-kien-thiet-long-an-do-ket-qua-xsla-lien-tuc-hom-nay.html">Xổ số kiến thiết Long An: Dò kết quả XSLA liên tục hôm nay</a>
+                    </h2>
+                    <p class="featured-desc">
+                        Cập nhật xổ số kiến thiết Long An trực tiếp siêu tốc, tra cứu kết quả XSLA nhanh chóng, xem lịch quay Thứ Bảy, cơ cấu giải thưởng và địa chỉ công ty XSKT.
+                    </p>
+                    <a href="https://ethanvance3.github.io/xo-so-kien-thiet-long-an-do-ket-qua-xsla-lien-tuc-hom-nay.html" class="read-more-btn">
+                        Đọc tiếp bài viết <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Bài 3: Power 6/55 -->
+            <article class="featured-card">
+                <div class="featured-content">
+                    <h2 class="featured-title">
+                        <a href="https://ethanvance3.github.io/power-6-55-dieu-nen-xac-nhan-truoc-khi-tin-ket-qua-truyen-mieng.html">Power 6/55: Điều nên xác nhận trước khi tin kết quả truyền miệng</a>
+                    </h2>
+                    <p class="featured-desc">
+                        Những lưu ý quan trọng khi đối soát kết quả Vietlott Power 6/55, tránh thông tin sai lệch truyền miệng và cách tra cứu kết quả chính xác nhất.
+                    </p>
+                    <a href="https://ethanvance3.github.io/power-6-55-dieu-nen-xac-nhan-truoc-khi-tin-ket-qua-truyen-mieng.html" class="read-more-btn">
+                        Đọc tiếp bài viết <span>→</span>
+                    </a>
+                </div>
+            </article>
+        </div>
 
     </div>
 

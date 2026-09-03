@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dò kết quả Xổ số Quảng Ngãi liên tục - Blog Ethan Vance</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-hover: #b71c1c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #222222;
+            --text-muted: #666666;
+            --border-color: #eee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-bar {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .brand-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Header Banner */
+        .header-banner-link {
+            display: block;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+
+        .header-banner-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container Main Body */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        .post-container {
+            background: var(--card-bg);
+            padding: 24px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 20px;
+        }
+
+        /* Post Meta Bar */
+        .post-meta-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 10px 0 18px 0;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .meta-item svg {
+            width: 15px;
+            height: 15px;
+            fill: #888;
+        }
+
+        /* Block Navigation (Next / Prev) */
+        .post-navigation {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .nav-box {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: background 0.2s ease;
+        }
+
+        .nav-box:hover {
+            background: #f0f0f0;
+        }
+
+        .nav-box.prev {
+            text-align: left;
+        }
+
+        .nav-box.next {
+            text-align: right;
+        }
+
+        .nav-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .nav-post-title {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            font-weight: 600;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Footer & Social Links Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 24px 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #2a2a2a;
+            color: #cccccc;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .copyright-text {
+            color: #888888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 12px;
+                margin: 15px auto;
+            }
+            .post-container {
+                padding: 18px 16px;
+            }
+            .post-navigation {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .nav-box.next {
+                text-align: left;
+            }
+            .post-meta-bar {
+                gap: 10px;
+                font-size: 0.82rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <div class="sticky-nav">
+        <div class="nav-bar">
+            <a href="https://ethanvance3.github.io/" class="brand-link">
+                <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                <span>Blog Ethan Vance</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header Banner -->
+    <a href="https://ethanvance3.github.io/" class="header-banner-link" title="Trang chủ Blog Ethan Vance">
+        <img src="https://sf-static.upanhlaylink.com/img/image_20260826db445dc03c6c0a4103105321658f365a.jpg" alt="Header Banner Blog Ethan Vance">
+    </a>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <main class="post-container">
+            <article style="font-family: Arial, sans-serif; color: #333333; line-height: 1.6; max-width: 100%; margin: 0 auto;">
+
+                <!-- Title H1 -->
+                <h1 style="color: #c0392b; font-size: 24px; font-weight: bold; margin-bottom: 12px; border-bottom: 2px solid #c0392b; padding-bottom: 8px;">
+                    XS Quang Ngai: Dò kết quả Xổ số Quảng Ngãi liên tục
+                </h1>
+
+                <!-- Post Meta (Tác giả - Ngày đăng - Lượt xem) -->
+                <div class="post-meta-bar">
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <span>Tác giả: <strong>Ethan Vance</strong></span>
+                    </div>
+                    <span>•</span>
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                        <span>Ngày đăng: <strong>03/09/2026</strong></span>
+                    </div>
+                    <span>•</span>
+                    <div class="meta-item">
+                        <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        <span>Lượt xem: <strong>1,420</strong></span>
+                    </div>
+                </div>
+
+                <!-- Sapo -->
+                <div style="background-color: #f8f9fa; border-left: 4px solid #c0392b; padding: 12px 15px; font-size: 15px; font-weight: 500; color: #444444; margin-bottom: 20px; border-radius: 0 4px 4px 0;">
+                    Tra cứu XS Quang Ngai trực tiếp siêu tốc, xem kết quả xổ số Quảng Ngãi liên tục Thứ Bảy hàng tuần, cẩm nang dò số, cơ cấu giải thưởng và địa chỉ công ty XSKT.
+                </div>
+
+                <!-- Intro -->
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Chào bà con, một ngày thứ Bảy bận rộn lại sắp qua đi và đây chính là thời điểm mà nhiều người trong chúng ta đang mong chờ để theo dõi bảng <a href="https://xosothienphu.vn/xsqng-xo-so-quang-ngai-sxqng.html" target="_blank" rel="noopener" title="XS Quang Ngai" style="color: #c0392b; font-weight: bold; text-decoration: underline;">XS Quang Ngai</a> quay thưởng định kỳ của tỉnh nhà[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Trong nhịp sống hiện đại ngày nay, việc nắm bắt thông tin kịp thời không chỉ là nhu cầu mà còn là thói quen của mỗi người[cite: 1]. Đặc biệt là với những ai thường xuyên ủng hộ vé số kiến thiết Quảng Ngãi, việc tìm kiếm một phương thức theo dõi kết quả một cách liên tục, ổn định và dễ dàng trên các thiết bị di động đã trở thành một phần không thể thiếu[cite: 1]. Bài viết này sẽ giúp bà con hiểu rõ hơn về cách thức đón xem kết quả cũng như những thông tin quan trọng liên quan đến đài Quảng Ngãi[cite: 1].
+                </p>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 20px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    KHUNG GIỜ QUAY THƯỞNG VÀ LỊCH MỞ THƯỞNG CHI TIẾT CỦA XỔ SỐ QUẢNG NGÃI
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Để không bỏ lỡ bất kỳ khoảnh khắc công bố kết quả nào, bà con cần ghi nhớ khung giờ quay thưởng định kỳ[cite: 1].
+                </p>
+
+                <!-- Blockquote -->
+                <blockquote style="background-color: #f0f7ff; border-left: 4px solid #2980b9; margin: 20px 0; padding: 12px 18px; font-style: italic; color: #2c3e50;">
+                    "Khung giờ quay thưởng trực tiếp Xổ số Quảng Ngãi diễn ra cố định từ 17h15 đến 17h35 vào chiều Thứ Bảy hàng tuần."[cite: 1]
+                </blockquote>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Theo quy định chung của Hội đồng Xổ số kiến thiết Miền Trung, đài Quảng Ngãi sẽ tiến hành quay số mở thưởng vào mỗi thứ Bảy hằng tuần cùng các đài quay <a href="https://xosothienphu.vn/xsmt-thu-7.html" target="_blank" rel="noopener" title="SXMT thu 7" style="color: #2980b9; text-decoration: none; font-weight: bold;">SXMT thu 7</a>[cite: 1]. Đây là một trong ba đài thuộc khu vực miền Trung mở thưởng vào ngày nghỉ cuối tuần, tạo điều kiện thuận lợi cho bà con có thời gian theo dõi trực tiếp[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Thời gian diễn ra buổi quay số trực tiếp bắt đầu từ lúc 17 giờ 15 phút và kéo dài đến khoảng 17 giờ 35 phút[cite: 1]. Trong khoảng 20 phút này, các hạng giải từ giải Tám đến giải Đặc biệt sẽ lần lượt được công bố công khai[cite: 1]. Việc nắm bắt chính xác khung giờ này giúp bà con có thể chủ động sắp xếp công việc cá nhân để ngồi lại cùng người thân, bạn bè và theo dõi những vòng quay kỳ diệu trên màn hình điện thoại hoặc máy tính một cách trọn vẹn[cite: 1].
+                </p>
+
+                <!-- Image 1 -->
+                <figure style="margin: 20px 0; text-align: center;">
+                    <img src="https://public.flourish.studio/uploads/2000115/f88049dc-879d-4fdf-a688-2caef887c83e.jpg" alt="Tra cứu XS Quang Ngai mượt mà trên di động" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                    <figcaption style="font-size: 13.5px; color: #666666; font-style: italic; margin-top: 8px;">Nguồn: Ảnh internet</figcaption>
+                </figure>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 20px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    TRẢI NGHIỆM CÔNG NGHỆ SỐ KHI DÒ KẾT QUẢ XỔ SỐ QUẢNG NGÃI LIÊN TỤC
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Ngày nay, với sự phát triển của công nghệ điện thoại thông minh, bà con không còn phải đứng đợi trước các đại lý hay chờ xem bản tin thời sự muộn để biết kết quả[cite: 1]. Thay vào đó, một giao diện số hiện đại đã mang đến trải nghiệm hoàn toàn khác biệt[cite: 1]. Cảm giác vuốt nhẹ màn hình mượt mà, các con số hiển thị rõ nét với màu sắc hài hòa, không gây mỏi mắt chính là điểm cộng lớn của việc dò số trực tuyến[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Bà con có thể thực hiện việc tra cứu <strong>XS Quang Ngai</strong> mọi lúc, mọi nơi, chỉ cần một chiếc điện thoại có kết nối internet[cite: 1]. Hệ thống website hiện nay được tối ưu hóa để tải dữ liệu cực kỳ nhẹ nhàng, giúp bà con tiết kiệm dung lượng mạng và không gặp tình trạng giật lag ngay cả khi có rất nhiều người truy cập cùng một lúc[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Đặc biệt, việc cập nhật nhanh chóng, chuẩn xác và tiện lợi tại trang web Xổ số Thiên Phú giúp bà con luôn có được thông tin mới nhất ngay khi tiếng còi kết thúc mỗi vòng quay vừa vang lên tại trường quay[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    <strong>Cách tra cứu kết quả trực tiếp cho bà con:</strong>[cite: 1]
+                </p>
+
+                <!-- Steps -->
+                <p style="margin-bottom: 8px; text-align: justify;"><strong>1. Bước 1:</strong> Bà con mở trình duyệt web trên điện thoại hoặc máy tính và truy cập vào trang tin tức xổ số uy tín Xổ số Thiên Phú[cite: 1].</p>
+                <p style="margin-bottom: 8px; text-align: justify;"><strong>2. Bước 2:</strong> Tại thanh thực đơn hoặc trang chủ, bà con chọn mục Xổ số miền Trung và tìm đến đài Quảng Ngãi[cite: 1].</p>
+                <p style="margin-bottom: 8px; text-align: justify;"><strong>3. Bước 3:</strong> Nếu bà con truy cập vào đúng khung giờ 17 giờ 15 phút thứ Bảy, các con số sẽ tự động xuất hiện trên màn hình theo trình tự quay thưởng[cite: 1].</p>
+                <p style="margin-bottom: 15px; text-align: justify;"><strong>4. Bước 4:</strong> Bà con có thể chọn xem kết quả của nhiều kỳ trước đó bằng cách sử dụng tính năng chọn ngày trên giao diện lịch để đối chiếu lại những tờ vé số cũ nếu chưa kịp dò[cite: 1].</p>
+
+                <hr style="border: 0; height: 1px; background-color: #d1d8e0; margin: 25px 0;">
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 20px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    CHI TIẾT CƠ CẤU GIẢI THƯỞNG XỔ SỐ KIẾN THIẾT MIỀN TRUNG
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Khi tham gia ủng hộ vé số kiến thiết với mệnh giá mỗi tờ vé là 10.000 VNĐ, bà con có cơ hội nhận được rất nhiều hạng giải thưởng khác nhau[cite: 1]. Xổ số Quảng Ngãi áp dụng cơ cấu giải thưởng chung của khu vực miền Trung và miền Nam với 18 lần quay số cho mỗi kỳ mở thưởng khi đối chiếu <strong>XS Quang Ngai</strong>[cite: 1]. Dưới đây là danh sách các hạng giải cụ thể mà bà con có thể nhận được:[cite: 1]
+                </p>
+
+                <!-- Prize Structure -->
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>1. Giải Đặc biệt:</strong> gồm 01 giải duy nhất dành cho vé trùng 6 chữ số, trị giá giải thưởng là 2.000.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>2. Giải Nhất:</strong> gồm 10 giải dành cho vé trùng 5 chữ số, mỗi giải trị giá 30.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>3. Giải Nhì:</strong> gồm 10 giải dành cho vé trùng 5 chữ số, mỗi giải trị giá 15.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>4. Giải Ba:</strong> gồm 20 giải dành cho vé trùng 5 chữ số, mỗi giải trị giá 10.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>5. Giải Tư:</strong> gồm 70 giải dành cho vé trùng 5 chữ số, mỗi giải trị giá 3.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>6. Giải Năm:</strong> gồm 100 giải dành cho vé trùng 4 chữ số, mỗi giải trị giá 1.000.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>7. Giải Sáu:</strong> gồm 300 giải dành cho vé trùng 4 chữ số, mỗi giải trị giá 400.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 6px; text-align: justify;"><strong>8. Giải Bảy:</strong> gồm 1.000 giải dành cho vé trùng 3 chữ số, mỗi giải trị giá 200.000 VNĐ[cite: 1].</p>
+                <p style="margin-bottom: 15px; text-align: justify;"><strong>9. Giải Tám:</strong> gồm 10.000 giải dành cho vé trùng 2 chữ số cuối, mỗi giải trị giá 100.000 VNĐ[cite: 1].</p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Bên cạnh đó, còn có 09 giải Phụ Đặc biệt trị giá 50.000.000 VNĐ mỗi giải dành cho những vé chỉ sai một chữ số ở hàng trăm ngàn so với giải Đặc biệt[cite: 1]. Ngoài ra, 45 giải Khuyến khích trị giá 6.000.000 VNĐ mỗi giải dành cho những vé sai một chữ số bất kỳ ở các hàng còn lại so với giải Đặc biệt[cite: 1].
+                </p>
+
+                <!-- Image 2 -->
+                <figure style="margin: 20px 0; text-align: center;">
+                    <img src="https://public.flourish.studio/uploads/2000115/a47175ce-dd7d-474c-b1c0-1862bcd5fd44.png" alt="Dò XS Quang Ngai chuẩn xác tại Xổ Số Thiên Phú" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                    <figcaption style="font-size: 13.5px; color: #666666; font-style: italic; margin-top: 8px;">Nguồn: Ảnh do Xổ Số Thiên Phú cung cấp</figcaption>
+                </figure>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 20px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    THÔNG TIN LIÊN HỆ CÔNG TY XỔ SỐ KIẾN THIẾT QUẢNG NGÃI
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Nếu bà con là người sở hữu tờ vé số có các con số trùng khớp khi kiểm tra <strong>XS Quang Ngai</strong>, bà con cần liên hệ ngay với công ty để làm thủ tục nhận thưởng[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Việc nắm rõ địa chỉ trụ sở sẽ giúp bà con yên tâm hơn và thực hiện các quy định đổi thưởng một cách chính xác nhất[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    <strong>Trụ sở Công ty TNHH MTV Xổ số kiến thiết Quảng Ngãi:</strong> số 04 Trương Quang Giao, phường Cẩm Thành, tỉnh Quảng Ngãi[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Khi đi nhận thưởng, bà con lưu ý mang theo tờ vé số còn nguyên vẹn, không rách nát, không tẩy xóa cùng với giấy tờ tùy thân hợp lệ[cite: 1]. Việc thực hiện đúng các quy định về thời hạn nhận thưởng trong vòng 30 ngày kể từ ngày mở thưởng là điều vô cùng quan trọng để bảo vệ quyền lợi chính đáng của mình[cite: 1].
+                </p>
+
+                <!-- Heading 2 -->
+                <h2 style="color: #16a085; font-size: 20px; font-weight: bold; margin-top: 25px; margin-bottom: 12px; border-bottom: 1px solid #16a085; padding-bottom: 5px;">
+                    GIÁ TRỊ NHÂN VĂN VÀ LỢI ÍCH XÃ HỘI TỪ XỔ SỐ
+                </h2>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Tham gia mua vé số kiến thiết không chỉ là một hình thức giải trí lành mạnh mà còn mang ý nghĩa đóng góp to lớn cho quê hương[cite: 1]. Với tinh thần <strong>Ích nước lợi nhà</strong>, nguồn doanh thu từ hoạt động phát hành xổ số sẽ được nộp vào ngân sách nhà nước để thực hiện các dự án phúc lợi xã hội[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Đó là những ngôi trường mới khang trang cho các em nhỏ, là những con đường bê tông sạch đẹp nối liền các thôn xóm, hay là những bệnh viện với trang thiết bị hiện đại phục vụ việc chăm sóc sức khỏe cho bà con vùng sâu vùng xa[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Mỗi tờ vé số bà con cầm trên tay chính là một viên gạch góp phần xây dựng tỉnh Quảng Ngãi ngày càng giàu đẹp hơn[cite: 1]. Đó chính là giá trị nhân văn cao cả mà xổ số truyền thống mang lại, giúp gắn kết cộng đồng và hỗ trợ những hoàn cảnh khó khăn vươn lên trong cuộc sống thông qua các quỹ khuyến học và chương trình từ thiện xã hội tại địa phương[cite: 1].
+                </p>
+
+                <p style="margin-bottom: 15px; text-align: justify;">
+                    Hy vọng rằng những thông tin trên đã giúp bà con có cái nhìn tổng quan và thuận tiện hơn trong việc theo dõi kết quả xổ số Quảng Ngãi[cite: 1]. Hãy luôn là những người tham gia có trách nhiệm và ủng hộ hình thức xổ số kiến thiết hợp pháp của nhà nước[cite: 1]. Để cập nhật thông tin hằng ngày và theo dõi trực tiếp các buổi quay thưởng, bà con đừng quên truy cập thường xuyên vào Xổ số Thiên Phú để có được trải nghiệm xem kết quả mượt mà và chuẩn xác nhất[cite: 1]. Chúc bà con luôn tìm thấy niềm vui trong mỗi tấm vé số kiến thiết và có những ngày cuối tuần thật hạnh phúc bên gia đình[cite: 1].
+                </p>
+
+                <!-- Block Xem thêm -->
+                <div style="background-color: #ebf5fb; border: 1px dashed #2980b9; padding: 12px 15px; border-radius: 6px; margin: 25px 0;">
+                    <span style="font-weight: bold; color: #c0392b; text-transform: uppercase; font-size: 13px;">Xem thêm:</span> 
+                    <a href="https://anyflip.com/homepage/tsuyt" target="_blank" rel="noopener" style="color: #2980b9; font-weight: bold; text-decoration: none; margin-left: 5px;">https://anyflip.com/homepage/tsuyt</a>
+                </div>
+
+                <!-- Footer chứa link Thiên Phú -->
+                <div style="text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #e0e0e0; font-size: 13.5px; color: #666666;">
+                    Theo dõi thông tin kết quả xổ số kiến thiết chuẩn xác tại <a href="http://xosothienphu.vn/" target="_blank" rel="noopener" title="Xổ số Thiên Phú" style="color: #c0392b; font-weight: bold; text-decoration: underline;">Xổ số Thiên Phú</a>.[cite: 1]
+                </div>
+
+            </article>
+        </main>
+
+        <!-- Navigation Next / Prev -->
+        <nav class="post-navigation">
+            <a href="https://ethanvance3.github.io/xo-so-mien-trung-thu-tu-tuan-truoc-huong-dan-tra-cuu-sieu-toc.html" class="nav-box prev">
+                <span class="nav-label">← Bài trước đó</span>
+                <span class="nav-post-title">Xổ số miền Trung thứ tư tuần trước: Hướng dẫn tra cứu siêu tốc</span>
+            </a>
+            <a href="https://ethanvance3.github.io/xs-hom-nay-cac-buoc-kiem-tra-ve-so-mien-nam-chuan-xac.html" class="nav-box next">
+                <span class="nav-label">Bài tiếp theo →</span>
+                <span class="nav-post-title">XS hôm nay: Các bước kiểm tra vé số miền Nam chuẩn xác</span>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Footer cố định Social Networks -->
+    <footer>
+        <div class="footer-socials">
+            <!-- X (Twitter) -->
+            <a href="https://x.com/ethanvance17" target="_blank" rel="noopener" class="social-link" title="X (Twitter)">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="https://www.pinterest.com/ethanvance2" target="_blank" rel="noopener" class="social-link" title="Pinterest">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+            </a>
+            <!-- Youtube -->
+            <a href="https://www.youtube.com/@xosothienphu" target="_blank" rel="noopener" class="social-link" title="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- Mastodon -->
+            <a href="https://mastodon.social/@ethanvance" target="_blank" rel="noopener" class="social-link" title="Mastodon">
+                <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.3-5.004C15.334.028 12 .008 12 .008s-3.334.02-5.968.301C3.352.703 1.085 2.735.734 5.313c-.417 3.085-.453 6.643-.075 9.778.261 2.164 1.34 4.246 3.49 5.093 2.17.854 4.634.985 6.942.827 2.164-.148 4.195-.733 6.014-1.848-.124-.555-.262-1.116-.41-1.67-.09-.347-.406-.59-.762-.572-1.442.072-2.884.095-4.327.027-1.46-.07-2.923-.284-4.32-.733-.314-.1-.497-.432-.423-.755.074-.323.385-.536.708-.475 2.656.495 5.38.583 8.067.243 1.983-.25 3.916-.893 5.688-1.876 1.066-1.554 1.31-3.488 1.4-5.323.14-2.83.053-5.672-.257-8.498zM17.65 13.9h-2.51v-5.27c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v2.86H9.68v-2.86c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v5.27H4.35V8.53c0-1.12.3-2.01.9-2.67.6-.66 1.4-1 2.4-1 1.16 0 2.03.44 2.61 1.32.58-.88 1.45-1.32 2.61-1.32 1 0 1.8.34 2.4 1 .6.66.9 1.55.9 2.67V13.9z"/></svg>
+            </a>
+            <!-- Vimeo -->
+            <a href="https://vimeo.com/ethanvance" target="_blank" rel="noopener" class="social-link" title="Vimeo">
+                <svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L4.85 9.873C4.24 7.632 3.518 6.512 2.684 6.512c-.179 0-.803.376-1.87 1.129L0 6.604c1.176-1.033 2.333-2.071 3.47-3.11 1.564-1.353 2.73-2.07 3.501-2.148 1.826-.179 2.957 1.07 3.393 3.746.471 2.879.802 4.654.992 5.326.643 2.977 1.353 4.467 2.13 4.467.608 0 1.518-.962 2.73-2.887 1.212-1.926 1.854-3.39 1.928-4.39.144-1.638-.46-2.458-1.815-2.458-.643 0-1.302.147-1.979.442 1.321-4.312 3.84-6.381 7.558-6.208 2.747.126 4.07 1.802 3.969 5.03z"/></svg>
+            </a>
+            <!-- Framer (Website) -->
+            <a href="https://ethanvance.framer.website/" target="_blank" rel="noopener" class="social-link" title="Framer Portfolio">
+                <svg viewBox="0 0 24 24"><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+            </a>
+        </div>
+        <div class="copyright-text">
+            © xosothienphu.vn - Blog Ethan Vance
+        </div>
+    </footer>
+
+</body>
+</html>
